@@ -1,0 +1,3 @@
+[submodule "butterfly-pdf"]
+	path = pdf
+	url = https://github.com/flaminghakama/butterfly-pdf
