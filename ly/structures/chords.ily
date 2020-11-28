@@ -25,7 +25,7 @@ chordsForm = \chordmode {
 
     \chordsA | c1:maj9 | g:aug9 | 
 
-    \chordsA | g1:m9 |  c1:9.11+ | 
+    \chordsA | g1:m9 |  c:9.11+ | 
 
     \chordsB | d2:m9 g:aug9 ||
 

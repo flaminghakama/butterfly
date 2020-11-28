@@ -23,3 +23,12 @@ arranger = ""
 }
 
 \include "../../flaming-libs/flaming-fonts.ily"
+
+eighths = { 
+    \override Beam.damping = #2.75 
+    \override Stem.length-fraction = #(magstep 1.85)
+}
+
+noEighths = {
+    \override Stem.length-fraction = #(magstep 0.5)
+}

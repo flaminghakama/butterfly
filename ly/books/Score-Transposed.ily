@@ -26,11 +26,12 @@
             SegmentInstrumental
             SegmentHeadOut
         ) <<
-            \include "ly/staffgroups/transposed/Woodwinds.ily"
-            \include "ly/staffgroups/transposed/Brass.ily"
-            \include "ly/staffgroups/concert/Choir.ily"
-            \include "ly/staffgroups/concert/Percussion.ily"
-            \include "ly/staffgroups/concert/Strings.ily"
+            %\include "ly/staffgroups/transposed/Woodwinds.ily"
+            \include "ly/staffgroups/transposed/Saxophones.ily"
+            %\include "ly/staffgroups/transposed/Brass.ily"
+            \include "ly/staffgroups/concert/Voices.ily"
+            %\include "ly/staffgroups/concert/Percussion.ily"
+            %\include "ly/staffgroups/concert/Strings.ily"
         >>
         \layout { 
             indent = 3.15\cm

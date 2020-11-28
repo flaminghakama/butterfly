@@ -1,21 +1,66 @@
+altoSaxophoneA = \relative c' {
+    e2 a4. g8 ~ | 2 e | 
+    c2 gs'4. fs8 ~ | 2 d | 
+    f2 b4. g8 ~ | 2 f | e1 | 
+}
+altoSaxophoneB = \relative c' {     
+    f4. 8 r2 | f4. 8 r2 | 
+    ef4. 8 r2 | ef4. 8 r2 | 
+    df4. 8 r2 | b4. 8 r2 | 
+    fs'4. f8 r4 r8 e ~ | 4. ds8 ~ 2 |
+}
+altoSaxophoneC = \relative c' { 
+    a1 | 
+    bf1 | 
+    b1 | 
+    r4 bf2 r4 | 
+    % <g a d'>1 | 
+    % <af bf d>1 | 
+    % <a b d>1 | 
+    % <g bf f'>1 | 
+}
+
+altoSaxophoneForm = \relative { 
+    % A1
+    \altoSaxophoneA
+    \relative c' {
+        ds8 4 8 r2 | 
+    }
+    % A2
+    \altoSaxophoneA
+    \relative c' {
+        e8 4 8 r2 | 
+    }
+    % B3
+    \altoSaxophoneB
+    % A4
+    \altoSaxophoneA
+    \relative c' {
+        e8 4 8 r2 
+    }
+    % C5
+    \altoSaxophoneC
+    \relative c { 
+        R1*4
+    }
+}
+
 altoSaxophoneSong = \relative c {     
 
-    \tag SegmentIntro {
-        s1*8
-        s1*2
+    \tag SegmentIntro \relative c' {
+        e2 a4. g8 ~ | 2 e | 
+        e2 a4. g8 ~ | 1 |
+
+        e2 a4. g8 ~ | 2 e | 
+        e2 a4. g8 ~ | 1 |
+
+        e1 ~ | 2 r ||
     }
     \tag SegmentHeadIn {
-        % A1
-        s1*8
-        % A2
-        s1*8
-        % B3
-        s1*8
-        % A4
-        s1*8
-        % C5
-        s1*8
-        s1*2
+        \altoSaxophoneForm
+        \relative c' { 
+            e2 a4. g8 ~ | 1 |
+        }
     }
     \tag SegmentSolos {
         % A6
@@ -40,16 +85,7 @@ altoSaxophoneSong = \relative c {
         s1*8
     }
     \tag SegmentHeadOut {
-        % A15
-        s1*8
-        % A16
-        s1*8
-        % B17
-        s1*8
-        % A18
-        s1*8
-        % C19
-        s1*8
+        \altoSaxophoneForm
         % Coda
         s1*4
         s1.

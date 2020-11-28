@@ -1,21 +1,62 @@
+tenorSaxophoneA = \relative c' {
+    r2 r4 r8 c8 | r c a4 g e | 
+    d2 r4 r8 d' | r d gs,2 ( a4 ) |
+    R1*3
+}
+tenorSaxophoneB = \relative c' {     
+    c4. 8 r2 | af4. 8 r2 | 
+    bf4. 8 r2 | gf4. 8 r2 | 
+    af4. 8 r2 | a4. 8 r2 | 
+    a4. g8 r4 r8 f ~ | 4. 8 ~ 2 |
+}
+tenorSaxophoneC = \relative c' { 
+    g1 | 
+    af1 | 
+    a1 | 
+    r4 g2 r4 | 
+}
+
+tenorSaxophoneForm = \relative { 
+    % A1
+    \tenorSaxophoneA
+    \relative c {
+        f8 4 8 r2 | 
+    }
+    % A2
+    \tenorSaxophoneA
+    \relative c {
+        fs8 4 8 r2 | 
+    }
+    % B3
+    \tenorSaxophoneB
+    % A4
+    \tenorSaxophoneA
+    \relative c' {
+        e8 4 8 r2 
+    }
+    % C5
+    \tenorSaxophoneC
+    \relative c { 
+        R1*4
+    }
+}
+
 tenorSaxophoneSong = \relative c {     
 
-    \tag SegmentIntro {
-        s1*8
-        s1*2
+    \tag SegmentIntro \relative c' {
+        r2 r4 r8 c8 | r c a4 g e | 
+        c2 r4 r8 c' | r c a4 ~ 2
+
+        r2 r4 r8 c8 | r c a4 g e | 
+        c2 r4 r8 c' | r c a4 ~ 2
+
+        bf1 ~ | 2 r ||
     }
     \tag SegmentHeadIn {
-        % A1
-        s1*8
-        % A2
-        s1*8
-        % B3
-        s1*8
-        % A4
-        s1*8
-        % C5
-        s1*8
-        s1*2
+        \tenorSaxophoneForm
+        \relative c { 
+            c2 r4 r8 c' | r c a4 ~ 2 |
+        }
     }
     \tag SegmentSolos {
         % A6
@@ -40,16 +81,7 @@ tenorSaxophoneSong = \relative c {
         s1*8
     }
     \tag SegmentHeadOut {
-        % A15
-        s1*8
-        % A16
-        s1*8
-        % B17
-        s1*8
-        % A18
-        s1*8
-        % C19
-        s1*8
+        \tenorSaxophoneForm
         % Coda
         s1*4
         s1.
