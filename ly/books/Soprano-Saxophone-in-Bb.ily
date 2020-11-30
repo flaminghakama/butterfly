@@ -20,8 +20,8 @@
         \keepWithTag #'(Part PDF
             SegmentIntro
             SegmentHeadIn
-            SegmentSolos
-            SegmentInstrumental
+            % SegmentSolos
+            % SegmentInstrumental
             SegmentHeadOut
         ) <<
             \include "ly/staves/parts/sopranoSaxophoneInBb.ily"

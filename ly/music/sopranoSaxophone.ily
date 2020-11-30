@@ -1,7 +1,7 @@
 sopranoSaxophoneA = \relative c'' {
     r8 g a [d] c4. g8 | a d c4 r2 |
     r8 fs, gs [d'] c4. fs,8 | gs d' c4 r2 |
-    r8 gs b [e] cs4. gs8 | b e ds4 ~ 4 b | d1 | 
+    r8 gs b [e] cs4. gs8 | b cs ds4 ~ 4 b | d1 | 
 }
 sopranoSaxophoneB = \relative c'' {     
     a4. 8 r2 | d4. 8 r2 | 
@@ -24,24 +24,25 @@ sopranoSaxophoneForm = \relative c'' {
     % A1
     \sopranoSaxophoneA
     \relative c'' {
-        b8 4 8 r2 | 
+        b8-> 4-> 8-> r2 | 
     }
     % A2
     \sopranoSaxophoneA
     \relative c'' {
-        bf8 4 8 r2 | 
+        bf8-> 4-> 8-> r2 | 
     }
     % B3
     \sopranoSaxophoneB
     % A4
     \sopranoSaxophoneA
     \relative c'' {
-        a8 4 8 r2 
+        a8-> 4-> 8-> r2 
     }
     % C5
     \sopranoSaxophoneC
-    \relative c { 
-        R1*4
+    \relative c' { 
+        R1 | r8 b d [g]  f af r4 | 
+        g1 ~ | 2 r |
     }
 }
 
@@ -54,7 +55,7 @@ sopranoSaxophoneSong = \relative c {
         r8 g, a [d] c4. g8 | a d c4 r2 | 
         r8 g a [d] c4. g8 | a d e4 ~ 2 | 
 
-        a,1 ~ | 2 r ||
+        r4 a,2. ~ | 2. r4 ||
     }
     \tag SegmentHeadIn {
         \sopranoSaxophoneForm
@@ -87,12 +88,24 @@ sopranoSaxophoneSong = \relative c {
     \tag SegmentHeadOut {
         \sopranoSaxophoneForm
         % Coda
-        s1*4
-        s1.
-        s1*4
+        \relative c' { 
+            R1 | r8 b d [g]  f af r4 | 
+            g1 ~ | 2 r ||
+        }
+        \relative c''' {
+            g8 bf af g f4 g8 f ef df c4 ||
+            ef8 df c bf af2 ( | a2 af ) | g1 ~ | 2 r ||
+        }
         % 4 bar repeat:
-        s1*4
-        s1*8
+        \relative c'' {
+            r8 g a [d] c4. g8 | a d c4 r2 | 
+            r8 g a [d] c4. g8 | a d e4 ~ 2 | 
+        }
+        \relative c' {
+            d1 ~ | 2 r | 
+            e1 ~ | 1 ~ | 1 ~ | 2 r |
+            R1 | \fermata g1 || 
+        }
     }
 }
 

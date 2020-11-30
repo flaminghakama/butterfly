@@ -20,24 +20,25 @@ tenorSaxophoneForm = \relative {
     % A1
     \tenorSaxophoneA
     \relative c {
-        f8 4 8 r2 | 
+        f8-> 4-> 8-> r2 | 
     }
     % A2
     \tenorSaxophoneA
     \relative c {
-        fs8 4 8 r2 | 
+        fs8-> 4-> 8-> r2 | 
     }
     % B3
     \tenorSaxophoneB
     % A4
     \tenorSaxophoneA
     \relative c' {
-        e8 4 8 r2 
+        e8-> 4-> 8-> r2 
     }
     % C5
     \tenorSaxophoneC
-    \relative c { 
-        R1*4
+    \relative c' { 
+        ef8 df c bf  af f r4 | r2 r8 af' df, [b] | 
+        e,1 ~ | 2 r |
     }
 }
 
@@ -50,7 +51,7 @@ tenorSaxophoneSong = \relative c {
         r2 r4 r8 c8 | r c a4 g e | 
         c2 r4 r8 c' | r c a4 ~ 2
 
-        bf1 ~ | 2 r ||
+        r4 bf2. ~ | 2. r4 ||
     }
     \tag SegmentHeadIn {
         \tenorSaxophoneForm
@@ -83,12 +84,25 @@ tenorSaxophoneSong = \relative c {
     \tag SegmentHeadOut {
         \tenorSaxophoneForm
         % Coda
-        s1*4
-        s1.
-        s1*4
+        \relative c' { 
+            ef8 df c bf  af f r4 | r2 r8 af' df, [b] | 
+            e,1 ~ | 2 r |
+        }
+        \relative c {
+            df8 f c' g' df'4 ef,8 df c bf af4 ||
+            ef''8 df c bf af f ef df | 
+            c8 b d g f af df, b | c1 ~ | 2 r ||
+        }
         % 4 bar repeat:
-        s1*4
-        s1*8
+        \relative c' {
+            r2 r4 r8 c8 | r c a4 g e | 
+            c2 r4 r8 c' | r c a4 ~ 2
+        }
+        \relative c {
+            e1 ~ | 2 r | 
+            df1 ~ | 1 ~ | 1 ~ | 2 r |
+            R1 | \fermata e1 || 
+        }
     }
 }
 

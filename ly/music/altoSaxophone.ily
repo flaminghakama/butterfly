@@ -24,37 +24,38 @@ altoSaxophoneForm = \relative {
     % A1
     \altoSaxophoneA
     \relative c' {
-        ds8 4 8 r2 | 
+        ds8-> 4-> 8-> r2 | 
     }
     % A2
     \altoSaxophoneA
     \relative c' {
-        e8 4 8 r2 | 
+        e8-> 4-> 8-> r2 | 
     }
     % B3
     \altoSaxophoneB
     % A4
     \altoSaxophoneA
     \relative c' {
-        e8 4 8 r2 
+        e8-> 4-> 8-> r2 
     }
     % C5
     \altoSaxophoneC
-    \relative c { 
-        R1*4
+    \relative c' { 
+        r2  r8 f ef [df] | c b r4 r2 | 
+        a1 ~ | 2 r |
     }
 }
 
 altoSaxophoneSong = \relative c {     
 
     \tag SegmentIntro \relative c' {
-        e2 a4. g8 ~ | 2 e | 
-        e2 a4. g8 ~ | 1 |
+        e2 a4. g8 ~ | 2 e ~| 
+        e2 a4. g8 ~ | 2 r |
 
-        e2 a4. g8 ~ | 2 e | 
-        e2 a4. g8 ~ | 1 |
+        e2 a4. g8 ~ | 2 e ~ | 
+        e2 a4. g8 ~ | 2 r |
 
-        e1 ~ | 2 r ||
+        r4 e2. ~ | 2. r4||
     }
     \tag SegmentHeadIn {
         \altoSaxophoneForm
@@ -87,12 +88,24 @@ altoSaxophoneSong = \relative c {
     \tag SegmentHeadOut {
         \altoSaxophoneForm
         % Coda
-        s1*4
-        s1.
-        s1*4
+        \relative c' { 
+            r2  r8 f ef [df] | c b r4 r2 | 
+            a1 ~ | 2 r |
+        }
+        \relative c' {
+            ef8 df f g af4 af8 bf c df f4 ||
+            ef8 df c bf af f4. ~ | 1 | e1 ~ | 2 r ||
+        }
         % 4 bar repeat:
-        s1*4
-        s1*8
+        \relative c' {
+            e2 a4. g8 ~ | 2 e ~| 
+            e2 a4. g8 ~ | 2 r |
+        }
+        \relative c' {
+            a1 ~ | 2 r | 
+            bf1 ~ | 1 ~ | 1 ~ | 2 r |
+            R1 | \fermata a1 || 
+        }
     }
 }
 

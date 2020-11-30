@@ -52,7 +52,7 @@ baritoneSaxophoneSong = \relative c {
         c4. g'8 a4. c,8 | r8 c4. ~ 4 g'4 | 
         c,4. g'8 a4. g8 ~ | 2. f4 | 
 
-        gf1 ~ | 2 r ||
+        r4 gf2. ~ | 2. r4 ||
     }
     \tag SegmentHeadIn {
         \baritoneSaxophoneForm 
@@ -85,12 +85,24 @@ baritoneSaxophoneSong = \relative c {
     \tag SegmentHeadOut {
         \baritoneSaxophoneForm
         % Coda
-        s1*4
-        s1.
-        s1*4
+        \relative c { 
+            df4. 8 ~ 4 4 ~ | 8 d4. ~ 4 df4 | 
+            c4. g'8 a4 g8 c | r2 r8 a8 g4 |   
+        }
+        \relative c' {
+            af8 df af df af4 df,8 af df af g4 ||
+            ef8 df2.. | d'8 g,4. df''8 g,4. | c8 a4. g4 e | c2 r ||
+        }
         % 4 bar repeat:
-        s1*4
-        s1*8
+        \relative c {
+            c4. g'8 a4. c,8 | r8 c4. ~ 4 g'4 | 
+            c,4. g'8 a4. g8 ~ | 2. d4 |
+        } 
+        \relative c {
+            c1 ~ | 2 r | 
+            gf1 ~ | 1 ~ | 1 ~ | 2 r |
+            R1 | \fermata c,1 || 
+        }
     }
 }
 
