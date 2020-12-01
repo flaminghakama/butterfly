@@ -1,3 +1,4 @@
+            \numericTimeSignature
             \compressFullBarRests
             \override MultiMeasureRest.expand-limit = #1
             \set Staff.instrumentName = ""
