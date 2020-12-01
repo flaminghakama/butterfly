@@ -13,7 +13,7 @@ baritoneSaxophoneC = \relative c {
     f4. 8 c4. 8 | f4. 8 bf,4. 8 | 
     e4. 8 b4. 8 | a4 f' ~ 8 cs4. 
     df4. 8 ~ 4 4 ~ | 8 d4. ~ 4 df4 |
-    c4. g'8 a4 g8 c | r2 r8 a8 ( g4 ) |
+    c4. g'8 ( a4 ) g8 c | r2 r8 a8 ( g4 ) |
 }
 
 baritoneSaxophoneForm = \relative { 
@@ -45,10 +45,10 @@ baritoneSaxophoneSong = \relative c {
 
     \tag SegmentIntro \relative c {
         c4. g'8 ( a4. ) c,8 | r8 c4. ~ 4 g'4 | 
-        c,4. g'8 ( a4. ) g8 ~ | 2. d4 | 
+        c,4. g'8 ( a4. ) g8 ( ~ | 2. d4 ) | 
 
         c4. g'8 ( a4. ) c,8 | r8 c4. ~ 4 g'4 | 
-        c,4. g'8 ( a4. ) g8 ~ | 2. f4 | 
+        c,4. g'8 ( a4. ) g8 ( ~ | 2. f4 ) | 
 
         r4 gf2. ~ | 2. r4 ||
     }
@@ -85,7 +85,7 @@ baritoneSaxophoneSong = \relative c {
         % Coda
         \relative c { 
             df4. 8 ~ 4 4 ~ | 8 d4. ~ 4 df4 | 
-            c4. g'8 a4 g8 c | r2 r8 a8 g4 |   
+            c4. g'8 ( a4 ) g8 c | r2 r8 a8 ( g4 ) |   
         }
         \relative c' {
             af8 df ( af ) df ( af4 ) df,8 af ( df ) af ( g4 ) ||
@@ -94,7 +94,7 @@ baritoneSaxophoneSong = \relative c {
         % 4 bar repeat:
         \relative c {
             c4. g'8 ( a4. ) c,8 | r8 c4. ~ 4 g'4 | 
-            c,4. g'8 ( a4. ) g8 ~ | 2. d4 |
+            c,4. g'8 ( a4. ) g8 ( ~ | 2. d4 ) |
         } 
         \relative c {
             c1 ~ | 2 r | 
