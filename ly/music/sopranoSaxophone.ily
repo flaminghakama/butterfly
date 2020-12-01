@@ -7,7 +7,7 @@ sopranoSaxophoneB = \relative c'' {
     a4. a,8 r2 | d'4. d,8 r2 | 
     g4. g'8 r2 | c,4. c,8 r2 | 
     f4. f'8 r2 | f4. f,8 r2 | 
-    d''4. cs8 ~ 8 a ( bf ) c ~ | 8 g ( a ) b8 ~ 2 |
+    d'4. cs8 ~ 8 a ( bf ) c ~ | 8 g ( a ) b8 ~ 2 |
 }
 sopranoSaxophoneC = \relative c'' { 
     d1 | 
